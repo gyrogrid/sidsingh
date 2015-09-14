@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+{% for title, snippet, post in post_preview %}
+<dl><dt><a href="/{{ post.id }}/">{{ title }}</a></dt>
+<dd>{{ snippet }}..</dd>
+</dl>
+{% endfor %}
+{% endblock %}
